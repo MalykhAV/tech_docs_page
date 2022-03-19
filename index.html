@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/454dd3bf54.js" crossorigin="anonymous"></script>
+    <title>Tech Docs</title>
+    
+    <nav id="navbar">
+        <header>
+            <h1>JavaScript Begginer's Guide</h1>
+            <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </a>
+        </header>
+        <div class="navbar-links">
+            <a href="#Introduction" class="nav-link">Introduction</a>
+            <a href="#Grammar_and_types" class="nav-link">Grammar and types</a>
+            <a href="#Loops_and_iteration" class="nav-link">Loops and iteration</a>
+            <a href="#Functions" class="nav-link">Functions</a>
+            <a href="#Expressions_and_operators" class="nav-link">Expressions and operators</a>
+        </div>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header class="section-header">Introduction</header>
+            <p>This chapter introduces JavaScript and discusses some of its fundamental concepts.</p>
+            <h3>What is JavaScript?</h3>
+            <p>JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.). There are also more advanced server side versions of JavaScript such as Node.js, which allow you to add more functionality to a website than downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+            <p>JavaScript contains a standard library of objects, such as <code>Array</code>, <code>Date</code>, and <code>Math</code> and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+            <ul>
+                <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+                <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+            </ul>    
+            <p>This means that in the browser, JavaScript can change the way the webpage (DOM) looks. And, likewise, Node.js JavaScript on the server can respond to custom requests from code written in the browser.</p>
+        </section>
+
+        <section class="main-section" id="Grammar_and_types">
+            <header class="section-header">Grammar and types</header>
+            <p>This chapter discusses JavaScript's basic grammar, variable declarations, data types and literals.</p>
+            <h3>Basics</h3>
+            <p>JavaScript borrows most of its syntax from Java, C, and C++, but it has also been influenced by Awk, Perl, and Python.</p>
+            <p>JavaScript is <bold>case-sensitive</bold> and uses the <bold>Unicode</bold> character set. For example, the word Früh (which means "early" in German) could be used as a variable name.</p>
+            <code>let Früh = "foobar"</code>
+            <p>But, the variable früh is not the same as Früh because JavaScript is case sensitive.</p>
+            <p>In JavaScript, instructions are called statements and are separated by semicolons (;).</p>
+
+            <h3>Declarations</h3>
+            <p>JavaScript has three kinds of variable declarations.</p>
+            <code>var</code><p>Declares a variable, optionally initializing it to a value.</p>
+            <code>let</code><p>Declares a block-scoped, local variable, optionally initializing it to a value.</p>
+            <code>const</code><p>Declares a block-scoped, read-only named constant.</p>
+            <h3>Variables</h3>
+            <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+            <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($). Subsequent characters can also be digits (0–9).</p>
+            <p>Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) as well as "a" through "z" (lowercase).</p>
+            <p>You can use most of ISO 8859-1 or Unicode letters such as å and ü in identifiers. (For more details, see this blog post.) You can also use the Unicode escape sequences as characters in identifiers.</p>
+            <p>Some examples of legal names are Number_hits, temp99, $credit, and _name.</p>
+        </section>
+
+        <section class="main-section" id="Loops_and_iteration">
+            <header class="section-header">Loops and iteration</header>
+            <p>Loops offer a quick and easy way to do something repeatedly. This chapter of the JavaScript Guide introduces the different iteration statements available to JavaScript.</p>
+            <p>You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction, then Y steps in another. For example, the idea "Go five steps to the east" could be expressed this way as a loop:</p>
+            <code>for (let step = 0; step < 5; step++) {
+                // Runs 5 times, with values of step 0 through 4.
+                console.log('Walking east one step');
+              }
+            </code>
+            <p>The statements for loops provided in JavaScript are:</p>
+            <ul><li>for statement</li>
+                <li>do...while statement</li>
+                <li>while statement</li>
+                <li>labeled statement</li>
+                <li>break statement</li>
+                <li>continue statement</li>
+                <li>for...in statement</li>
+                <li>for...of statement</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Functions">
+            <header class="section-header">Functions</header>
+            <p>Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.</p>
+            <h3>Function declarations</h3>
+            <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+            <ul><li>The name of the function.</li>
+                <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                <li>The JavaScript statements that define the function, enclosed in curly brackets, <code>{...}</code>.</li>
+            </ul>
+            <p>For example, the following code defines a simple function named square:</p>
+            <code>function square(number) {
+                return number * number;
+              }
+            </code>
+            <h3>Function expressions</h3>
+            <p>While the function declaration above is syntactically a statement, functions can also be created by a function expression.</p>
+            <p>Such a function can be anonymous; it does not have to have a name. For example, the function square could have been defined as:</p>
+            <code>const square = function(number) { return number * number }
+                var x = square(4) // x gets the value 16</code>
+            <h3>Calling functions</h3>
+            <p>Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called.</p>
+            <p><bold>Calling</bold> the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows:</p>
+             <code>square(5);</code>   
+            <p>The preceding statement calls the function with an argument of 5. The function executes its statements and returns the value 25.</p>
+        </section>
+
+        <section class="main-section" id="Expressions_and_operators">
+            <header class="section-header">Expressions and operators</header>
+            <p>This chapter describes JavaScript's expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.</p>
+            <h2>Operators</h2>
+            <p>JavaScript has the following types of operators. This section describes the operators and contains information about operator precedence.</p>
+            <ul>
+                <li>Assignment operators</li>
+                <li>Comparison operators</li>
+                <li>Arithmetic operators</li>
+                <li>Bitwise operators</li>
+                <li>Logical operators</li>
+                <li>String operators</li>
+                <li>Conditional (ternary) operator</li>
+                <li>Comma operator</li>
+                <li>Unary operators</li>
+                <li>Relational operators</li>
+            </ul>
+        </section>
+
+    </main>
