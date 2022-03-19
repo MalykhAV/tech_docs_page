@@ -11,10 +11,12 @@ https://malykhav.github.io/tech_docs_page/
 
 ## Contribution
 Made by Anna Williams
+
 ©️2022 Anna Williams
 
 ## FreeCodeCamp Project: Build a Technical Documentation Page
 The following criteria must be met. FreeCodeCamp did not provide any code samples for project; all design and code is original.
+
 User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
 
 User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
